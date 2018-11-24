@@ -1,0 +1,180 @@
+﻿@model IEnumerable<RTCI_SBDC_2.Models.ClientInformation>
+
+<p>
+    @Html.ActionLink("Create New", "CreateClients")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BestContactMethod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BestTimeForContact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentlyInBusiness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsHomeBased)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Race)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VeteranStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SBAClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Export)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CounsellingType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescribeBusiness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WebAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestForCounsellingInfo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BestContactMethod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BestTimeForContact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentlyInBusiness)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsHomeBased)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Race)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VeteranStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SBAClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Export)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CounsellingType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescribeBusiness)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WebAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestForCounsellingInfo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+    </tr>
+}
+
+</table>
