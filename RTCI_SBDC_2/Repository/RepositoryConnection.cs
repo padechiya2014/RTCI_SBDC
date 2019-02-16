@@ -7,6 +7,7 @@ using System.Web;
 
 namespace RTCI_SBDC_2.Repository
 {
+    // Singleton class for Database connection.
     public sealed class RepositoryConnection
     {
         static RepositoryConnection sqlinstance = null;

@@ -96,7 +96,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Properties\PublishProfiles\rtci-sbdc - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\RTCISBDC220181208063248 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\chat.png" />
+    <Content Include="Images\first.jpg" />
+    <Content Include="Images\second.jpg" />
+    <Content Include="Images\third.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -114,6 +120,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClientInformationsController.cs" />
+    <Compile Include="Controllers\LandingController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -124,6 +132,7 @@
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Export.cs" />
     <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Models\PhoneTypes.cs" />
     <Compile Include="Models\Race.cs" />
     <Compile Include="Models\Region.cs" />
@@ -151,6 +160,10 @@
     <Content Include="Views\ClientInformations\CreateClients.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\ClientInformations\GetAllClientDetails.cshtml" />
+    <Content Include="Views\Shared\Landing.cshtml" />
+    <Content Include="Views\Shared\TextVideoChat.cshtml" />
+    <Content Include="Views\Shared\TextChat.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

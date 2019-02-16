@@ -140,5 +140,37 @@ namespace RTCI_SBDC_2.Repository
 
             return ClientList;
         }
+
+
+        // To get all the users for the Login
+        public bool GetAllUserLogin(string firstName, String Lastname)
+        {
+
+            //connection();
+            //List<UserLogin> UserLoginList = new List<UserLogin>();
+
+            SqlCommand com = new SqlCommand("GetUsers", RepositoryConnection.Instance)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            com.Parameters.AddWithValue("@firstName", firstName);
+            com.Parameters.AddWithValue("@lastName", Lastname);
+
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+
+            RepositoryConnection.Instance.Open();
+            int usercount = (Int32)com.ExecuteScalar();// for taking single value
+            //da.Fill(dt);
+            RepositoryConnection.Instance.Close();
+
+           
+            if(usercount > 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

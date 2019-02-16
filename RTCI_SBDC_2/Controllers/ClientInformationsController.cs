@@ -105,7 +105,8 @@ namespace RTCI_SBDC_2.Controllers
                     return View("CreateClients", client);
                 }
 
-                return RedirectToAction("GetAllClientDetails");
+                //return RedirectToAction("GetAllClientDetails");
+                return View("TextVideoChat");
 
             }
             catch (Exception ex)
@@ -118,7 +119,12 @@ namespace RTCI_SBDC_2.Controllers
         // GET: ClientInformations
         public ActionResult Index()
         {
-            return View();
+            return View("Landing");
+        }
+
+        public ActionResult TextChatView()
+        {
+            return View("TextChat");
         }
 
         // GET: ClientInformations/Details/5

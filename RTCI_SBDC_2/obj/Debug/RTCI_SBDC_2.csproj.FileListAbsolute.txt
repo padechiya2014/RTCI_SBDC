@@ -1,3 +1,5 @@
+C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\obj\Debug\RTCI_SBDC_2.csprojAssemblyReference.cache
+C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\obj\Debug\RTCI_SBDC_2.csproj.CoreCompileInputs.cache
 C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\bin\RTCI_SBDC_2.dll.config
 C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\bin\RTCI_SBDC_2.dll
 C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\bin\RTCI_SBDC_2.pdb
@@ -62,8 +64,6 @@ C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\bin\System.Web.Webpages.Razo
 C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\bin\System.Web.Helpers.xml
 C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\bin\System.Web.Mvc.xml
 C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\obj\Debug\RTCI_SBDC_2.csprojAssemblyReference.cache
-C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\obj\Debug\RTCI_SBDC_2.csproj.CoreCompileInputs.cache
 C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\obj\Debug\RTCI_SBDC_2.csproj.CopyComplete
 C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\obj\Debug\RTCI_SBDC_2.dll
 C:\Users\mihir\source\repos\RTCI_SBDC_2\RTCI_SBDC_2\obj\Debug\RTCI_SBDC_2.pdb
