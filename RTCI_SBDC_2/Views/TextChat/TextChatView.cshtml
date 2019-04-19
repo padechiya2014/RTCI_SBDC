@@ -1,0 +1,38 @@
+﻿
+
+
+<h1> SBDC CLient to Advisor Online Chat</h1>
+<h4>Welcome,  @Html.Label("lblClientName", "Client Chat Box", htmlAttributes: new { @class = "control-label col-md-2" })</h4>
+
+
+<div class="form-group">
+
+    @Html.Label("lblClientChatBox", "Client Chat Box", htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextArea("CommentsToAdd", string.Empty, 10, 100, new { htmlAttributes = new { @class = "textarea1" } })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.Label("lblAdvisorName", "Advisor Name", htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBox("txtAdvisorName", "Rochelle", new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.Label("lblAdvisorchat", "Type below and press the send button", htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBox("txtAdvisorChat", "", new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-offset-5 col-md-10">
+        <input type="submit" value="Send Text" class="btn btn-default" />
+    </div>
+</div>
+
+
+
+
