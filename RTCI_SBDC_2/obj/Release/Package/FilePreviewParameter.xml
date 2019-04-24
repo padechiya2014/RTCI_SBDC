@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="RTCI" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\mihir\\source\\repos\\RTCI_SBDC_2\\RTCI_SBDC_2\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\mihir\\source\\repos\\RTCI_SBDC_2\\RTCI_SBDC_2\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="RTCIDbContext-Web.config Connection String" description="RTCIDbContext Connection String used in web.config by the application to access the database." value="Data Source=rtciserver.database.windows.net;Initial Catalog=RTCIDb;&#xD;&#xA;         User ID=adminserver;Password=Binghamton2301$;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;&#xD;&#xA;         ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\mihir\\source\\repos\\RTCI_SBDC_2\\RTCI_SBDC_2\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RTCIDbContext']/@connectionString" />
+  </parameter>
+</parameters>
