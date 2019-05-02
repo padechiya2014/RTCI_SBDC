@@ -1,95 +1,56 @@
-﻿using System;
+﻿using RTCI_SBDC_2.Models;
+using RTCI_SBDC_2.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 
 namespace RTCI_SBDC_2.Controllers
 {
     public class TextChatController : Controller
     {
-        public ActionResult TextChatView()
-        {
-            return View("TextChat");
-        }
+        RTICRepository db = new RTICRepository();
 
-
-        // GET: TextChat
+        // GET: Home  
         public ActionResult Index()
         {
-            return View();
-        }
-
-        // GET: TextChat/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: TextChat/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: TextChat/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
+            if (Session["userid"] == null)
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                return RedirectToAction("login");
             }
-            catch
+            else
             {
                 return View();
             }
         }
-
-        // GET: TextChat/Edit/5
-        public ActionResult Edit(int id)
+        
+        public ActionResult login()
         {
-            return View();
+
+            return View("Login");
         }
 
-        // POST: TextChat/Edit/5
+
+       
+
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public JsonResult friendlist()
         {
-            try
+            int id = Convert.ToInt32(Session["userid"].ToString());
+            List<UserModel> users = db.GetAdvisors(id);
+            List<ListItem> userlist = new List<ListItem>();
+            foreach (var item in users)
             {
-                // TODO: Add update logic here
+                userlist.Add(new ListItem
+                {
+                    Value = item.email.ToString(),
+                    Text = item.email.ToString()
 
-                return RedirectToAction("Index");
+                });
             }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: TextChat/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: TextChat/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return Json(userlist);
         }
     }
 }

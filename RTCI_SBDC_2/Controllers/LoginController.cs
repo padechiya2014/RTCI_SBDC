@@ -12,7 +12,7 @@ namespace RTCI_SBDC_2.Controllers
     public class LoginController : Controller
     {
 
-
+        RTICRepository db = new RTICRepository();
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
@@ -20,16 +20,52 @@ namespace RTCI_SBDC_2.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult login()
+        {
+
+            return View("Login");
+        }
+
+
+        [HttpPost]
+        public ActionResult Login(UserModel userModel)
+        {
+
+
+            bool exist = db.GetAllUserLogin(userModel.email, userModel.password);
+
+            if (exist)
+            {
+                ViewData["status"] = 1;
+                ViewData["msg"] = "login Successful...";
+                Session["username"] = userModel.email;
+                Session["userid"] = userModel.userid.ToString();
+                return View("Landing");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Invalid username or password");
+                return View();
+            }
+
+        }
 
         public ActionResult Index()
         {
-            return View();
+            if (Session["userid"] == null)
+            {
+                return RedirectToAction("login");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         [HttpPost]
         public ActionResult Index(UserLogin userModel)
         {
-            RTICRepository db = new RTICRepository();
+            //RTICRepository db = new RTICRepository();
 
             bool exist = db.GetAllUserLogin(userModel.FirstName, userModel.LastName);
            
