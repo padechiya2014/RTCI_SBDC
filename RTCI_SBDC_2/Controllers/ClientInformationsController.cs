@@ -127,6 +127,11 @@ namespace RTCI_SBDC_2.Controllers
             return View("TextChat");
         }
 
+        public ActionResult TextVideoChatView()
+        {
+            return Redirect("https://rtcivideochat.azurewebsites.net");
+        }
+
         // GET: ClientInformations/Details/5
         public ActionResult Details(int id)
         {
